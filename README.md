@@ -411,6 +411,7 @@ and
     * `dex_methyl_phenotype.rds`: final phenotype data after excluding poor qc and mix-ups samples _(399 x 16)_
     * `dex_methyl_detP.rds`: final p-values matrix after excluding poor qc and mix-ups samples but not probes _(866'836 x 399)_
     * `dex_methyl_bmiq_quantileN.rds`: final beta matrix after quantile + BMIQ normalization, samples filtering and mix-ups removal _(865'859 x 399)_
+    * `dex_methyl_bmiq_beta_mtrx.rds`: final beta matrix after BMIQ normalization, samples filtering and mix-ups removal _(862'805 x 399)_
     * `dex_methyl_bmiq_quantileN_filtered.rds`: final beta matrix after normalization, probes and samples filtering and mix-ups removal _(740'357 x 399)_
     * `dex_methyl_beta_combat_mtrx.rds`: final beta matrix after normalization, probes and samples filtering, batch correction and mix-ups removal _(740'357 x 399)_
     * `dex_methyl_beta_combat_exprset.rds`: final beta expression set after normalization, probes and samples filtering, batch correction and mix-ups removal _(740'357 x 399)_

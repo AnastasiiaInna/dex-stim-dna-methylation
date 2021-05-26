@@ -41,5 +41,11 @@ mod0 <- model.matrix(~ 1, data = pheno)
 n.sv  <- num.sv(m.mtrx, mod, method="leek")
 svobj <- sva(m.mtrx, mod, mod0, n.sv = n.sv)
 
+# Save the results
+methyl.svs.df <- cbind(pheno$Sample_Name, svobj$sv)
+colnames(methyl.svs.df) <- c("DNAm_ID", "DNAm_SV1", "DNAm_SV2", "DNAm_SV3")
 
+write.csv2(methyl.svs.df, 
+           file = paste0("/binder/mgp/datasets/2020_DexStim_Array_Human/methylation/12_DNAm_sva/", "methyl_svs.csv"),
+           row.names = F, quote = F)
 

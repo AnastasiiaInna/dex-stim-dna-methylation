@@ -242,7 +242,15 @@ Folder: `/binder/mgp/datasets/2020_DexStim_Array_Human/methylation/rData`
 
 ## **6. Surrogate Variable Analysis (SVA):**
 
-Returned zero surrogate variables
+SV2 were calculated using the R package __sva__ with the following design:
+
+```r
+mod0 <- model.matrix(~ 1 + individual_id, data = pheno)
+mod  <- model.matrix(~ individual_id + Sample_Group, data = pheno)
+```
+
+Returned 62 SVs:
+
 
 ## **7. MixupMapper:**
 
